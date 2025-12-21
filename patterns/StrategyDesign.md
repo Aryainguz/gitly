@@ -65,3 +65,5 @@ Engine myEngine = new V8Engine();
 Car myCar = new Car(myEngine);
 myCar.drive();
 ```
+
+## Stragegy Design Pattern is an example of Loose Coupling where different algorithms or strategies can be selected at runtime without changing the context class that uses them.
