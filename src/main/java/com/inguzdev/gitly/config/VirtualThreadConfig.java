@@ -18,6 +18,8 @@ public class VirtualThreadConfig {
      * HTTP requests already use virtual threads via
      * spring.threads.virtual.enabled=true
      */
+
+    // Override default executor used by @Async
     @Bean(TaskExecutionAutoConfiguration.APPLICATION_TASK_EXECUTOR_BEAN_NAME)
     public AsyncTaskExecutor asyncTaskExecutor() {
         return new TaskExecutorAdapter(Executors.newVirtualThreadPerTaskExecutor());
