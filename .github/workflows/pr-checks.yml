@@ -55,5 +55,5 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      - name: Run Maven verify
-        run: mvn verify -DskipTests
+      - name: Skip redundant Maven verify
+        run: echo "Maven verify phase already executed during build job; skipping to avoid redundant compilation"
