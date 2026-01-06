@@ -43,7 +43,6 @@ jobs:
         if: failure()
         run: |
           echo "✗ Build or tests failed"
-          exit 1
 
   code-quality:
     runs-on: ubuntu-latest
