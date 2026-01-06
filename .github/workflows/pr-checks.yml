@@ -30,11 +30,7 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean install -DskipTests
-
-      - name: Run tests
-        run: mvn test
-
+        run: mvn clean install
       - name: Check build success
         if: success()
         run: echo "✓ Build and tests passed successfully"
